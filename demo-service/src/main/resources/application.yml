@@ -1,0 +1,42 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /demo
+
+spring:
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.140.115.114:3306/szw_devdb?useUnicode=true&characterEncoding=utf8&allowmultiqueries=true&useSSL=false
+    username: infodba
+    password: password
+  redis:
+    database: 0
+    host: 8.140.115.114
+    port: 6379
+  druid:
+    initial-size: 10
+    min-idle: 10
+    max-active: 30
+    max-wait: 2000
+  elasticsearch:
+    rest:
+      uris: http://8.140.115.114:9200
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://8.140.115.114:3000/eureka # 注册到Eureka Server
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+  threadPool:
+    default:
+      coreSize: 500
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 3000
