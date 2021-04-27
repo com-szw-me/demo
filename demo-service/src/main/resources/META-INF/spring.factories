@@ -2,4 +2,4 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 com.szw.me.framework.redis.SzwRedisAutoConfiguration,\
 com.szw.me.framework.swagger.SwaggerAutoConfiguration,\
 com.szw.me.framework.context.ContextInterceptorAutoConfiguration,\
-com.szw.me.framework.executor.SzwExecutorConfiguration
+com.szw.me.framework.executor.SzwExecutorAutoConfiguration
